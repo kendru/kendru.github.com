@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Getting started with Backbone.js"
-description: "Create a simple app with Backbone.jss"
+description: "Create a simple app with Backbone.js"
 category: javascript
 tags: ["tutorial", "javascript", "backbone"]
 ---
