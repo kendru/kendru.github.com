@@ -3,7 +3,7 @@ layout: post
 title: "Simple is better"
 description: "When designing a new product or software feature, choose the
 simplest implementation that works"
-category: "Software Engineering"
+category: "software-engineering"
 tags: ["simplity", "design"]
 ---
 {% include JB/setup %}
