@@ -23,7 +23,7 @@ so that we can actually enjoy the fruits of our labour. You should be able to
 extend the application to create an awesome web or mobile app.
 
 All of the source code for this project is available as a 
-[GitHub repo]([https://github.com/kendru/restful-clojure). Each part of the
+[GitHub repo](https://github.com/kendru/restful-clojure). Each part of the
 project has a corresponding git tag that you can checkout for that specific
 part. For example, for this first tutorial, you can checkout `tags/part1`.
 Please fork the project and experiment with it. I'm releasing all of the code
