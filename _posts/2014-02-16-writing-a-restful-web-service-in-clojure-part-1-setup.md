@@ -24,8 +24,8 @@ extend the application to create an awesome web or mobile app.
 
 All of the source code for this project is available as a 
 [GitHub repo](https://github.com/kendru/restful-clojure). Each part of the
-project has a corresponding git tag that you can checkout for that specific
-part. For example, for this first tutorial, you can checkout `tags/part1`.
+project has a corresponding branch that you can checkout for that specific
+part. For example, for this first tutorial, you can checkout `part2`.
 Please fork the project and experiment with it. I'm releasing all of the code
 under a MIT license, so you can do pretty much anything you want with it.
 
@@ -208,5 +208,5 @@ vagrant provision
 {% endhighlight %}
 
 Congratulations - you now have a functional Leiningen project set up with
-a shiny new development VM to run it on! In the next tutorial, we'll take our
+a shiny new development VM to run it on! In [the next tutorial](/restful-clojure/2014/02/19/getting-a-web-server-up-and-running-with-compojure-restful-clojure-part-2/), we'll take our
 application from skeleton to basic web server with a few tests to boot.
