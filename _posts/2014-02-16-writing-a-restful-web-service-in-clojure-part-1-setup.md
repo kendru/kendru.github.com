@@ -56,15 +56,17 @@ Clojure. With that brief introduction, let's dig in!
 You'll need to download the lein script and place it somewhere on your path.
 Assuming you have a `bin` subdirectory inside your home directory, the
 following commands are all that is necessary to get started:
-```shell
+
+{% highlight shell %}
 wget https://raw.github.com/technomancy/leiningen/stable/bin/lein -O ~/bin/lein
 chmod a+x ~/bin/lein
-```
+{% endhighlight %}
 
 With that, we can create our project with one command:
-```shell
+{% highlight shell %}
 lein new restful-clojure
-```
+{% endhighlight %}
+
 This will create the basic project structure that we will be building our app
 on. I have removed the LICENSE and README.md files that Leiningen generates and
 have placed a license and readme in the project root instead. Lein works under
@@ -73,6 +75,7 @@ a project, but since we're keeping Vagrant/Puppet configuration in our project
 as well, our project root will actually be the parent folder to the folder that
 Leiningen generates. Right now, your project should look something like the
 following:
+
 ```
 ├── LICENSE
 ├── README.md
@@ -92,20 +95,20 @@ package for your OS. Vagrant uses
 download the latest version. Once you have Vagrant and VirtualBox installed,
 grab the project source from GitHub:
 
-```shell
+{% highlight shell %}
 git clone https://github.com/kendru/restful-clojure
 cd restful-clojure
 git checkout tags/part1
-```
+{% endhighlight %}
 
 At this point, you can run `vagrant up` to download the vagrant box and boot
 your dev VM. Since the box is about 400MB, go ahead and start Vagrant so that
 the download will start. In the meantime, let's take a look at the Vagrantfile:
 
-```ruby
+{% highlight ruby %}
 config.vm.box = "ubuntu-puppetlabs"
 config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210.box"
-```
+{% endhighlight %}
 
 Here we are instructing Vagrant to download the box from the Puppetlabs URL as
 "ubuntu-puppetlabs". If you want to use another box, you can easily specify
@@ -117,57 +120,57 @@ and test our deployment using the VM. We also allow the machine to access our
 host machine's network so that we can take advantage of our host's internet
 connection for downloading the packages that we want to install.
 
-```ruby
+{% highlight ruby %}
 config.vm.network :private_network, ip: "192.168.33.10"
 config.vm.network :public_network
-```
+{% endhighlight %}
 
 We also want to be able to access our project from within the VM, so we'll want
 to mount our Leiningen project folder within the VM.
-```ruby
+{% highlight ruby %}
 config.vm.synced_folder "./restful-clojure", "/vagrant"
-```
+{% endhighlight %}
 
 Finally, we configure Vagrant to provision our VM using Puppet. We create
 a `puppet` folder with `manifests` and `modules` subfolders.
 
-```shell
+{% highlight shell %}
 mkdir puppet puppet/manifests puppet/modules
-```
+{% endhighlight %}
 
 For our app, our only dependencies (at least initially) will be a Java runtime
 and the PostgreSQL database. Instead of manually writing all of the boilerplate
 Puppet code for setting up Java and Postgres, we'll use Puppet modules, which
 we'll add to our repo as git submodules If you have cloned the project from
 github, you can get the submodules by executing:
-```shell
+{% highlight shell %}
 git submodule update --init --recursive
-```
+{% endhighlight %}
 Otherwise, add all of the puppet modules that we need as git submodules within
 puppet/modules:
-```shell
+{% highlight shell %}
 git submodule add https://github.com/puppetlabs/puppetlabs-stdlib.git puppet/modules/stdlib
 git submodule add https://github.com/puppetlabs/puppetlabs-postgresql.git puppet/modules/postgresql
 git submodule add https://github.com/puppetlabs/puppetlabs-concat.git puppet/modules/concat
 git submodule add https://github.com/softek/puppet-java7 puppet/modules/java7
 git submodule add https://github.com/puppetlabs/puppetlabs-apt.git puppet/modules/apt
-```
+{% endhighlight %}
 
 Finally, we'll create a Puppet manifest at
 puppet/manifests/default.pp and configure Vagrant to use this manifest for
 provisioning the VM:
 
 #### Vagrantfile
-```ruby
+{% highlight ruby %}
 config.vm.provision "puppet" do |puppet|
 	puppet.manifests_path = "puppet/manifests"
 	puppet.module_path = "puppet/modules"
 	puppet.manifest_file = "default.pp"
 end
-```
+{% endhighlight %}
 
 #### puppet/manifests/default.pp
-```ruby
+{% highlight ruby %}
 exec { 'update_packages':
 	command => 'apt-get update',
 	path    => '/usr/bin',
@@ -193,16 +196,16 @@ postgresql::server::db { 'restful_test':
 }
 
 include java7
-```
+{% endhighlight %}
 
 From this point, fire up your VM, and you should have your environment
 available:
-```shell
+{% highlight shell %}
 # If you have not yet started your vagrant box
 vagrant up
 # If you have already run 'vagrant up'
 vagrant provision
-```
+{% endhighlight %}
 
 Congratulations - you now have a functional Leiningen project set up with
 a shiny new development VM to run it on! In the next tutorial, we'll take our

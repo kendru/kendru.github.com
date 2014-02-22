@@ -26,7 +26,7 @@ sockets, request parsing, etc.
 In order to make use of Ring in our application, we need to add it as
 a dependency in Leiningen's `project.clj`.
 
-```clojure
+{% highlight clojure %}
 ; project.clj
 (defproject restful-clojure "0.1.0-SNAPSHOT"
   ; ...project settings...
@@ -40,15 +40,15 @@ a dependency in Leiningen's `project.clj`.
                  [ring/ring-core "1.2.1"]
                  [ring/ring-jetty-adapter "1.2.1"]
                  [compojure "1.1.6"]])
-```
+{% endhighlight %}
 
 With our dependencies declared, let's fire up a REPL and build a quick server
 (Leiningen will download the dependencies before launching the repl):
 
-```bash
+{% highlight shell %}
 lein repl
-```
-```clojure
+{% endhighlight %}
+{% highlight clojure %}
 (use 'ring.adapter.jetty)
 ; => nil
 (defn app-handler [request]
@@ -57,7 +57,7 @@ lein repl
    :body "Hello from Ring"})
 ; => #'user/app-handler
 (run-jetty app-handler {:port 3000})
-```
+{% endhighlight %}
 
 That's it! We now have a Ring application up and running, albeit a pretty
 boring one. If you visit `localhost:3000` in a web browser, you should see the
@@ -72,7 +72,7 @@ case of the `app-handler` function above, we're binding the request map to the
 `:body` keys. Let's go back to the REPL and create a new server that responds
 by printing out the request map received as a Clojure map:
 
-```clojure
+{% highlight clojure %}
 (use 'ring.adapter.jetty)
 ; => nil
 (defn app-handler [request]
@@ -81,7 +81,7 @@ by printing out the request map received as a Clojure map:
    :body (str request)})
 ; => #'user/app-handler
 (run-jetty app-handler {:port 3000})
-```
+{% endhighlight %}
 
 Now when you visit `localhost:3000` with a browser (or any other HTTP client),
 you should see your HTTP request printed as a Clojure map.
@@ -147,7 +147,7 @@ Before we dive in, there are a couple more options that we should add to
 `project.clj` to make our development a little smoother with Ring and
 Compojure.
 
-```clojure
+{% highlight clojure %}
 ; project.clj
 (defproject restful-clojure "0.1.0-SNAPSHOT"
   ; ...project settings...
@@ -166,13 +166,13 @@ Compojure.
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
                         [ring-mock "0.1.5"]]}})
-```
+{% endhighlight %}
 
 Instead of a lengthy introduction, let's start by playing with some code!
 Create `restful-clojure/src/restful_clojure/handler.clj`, and use the code from
 below to create an application that can count either up or down.
 
-```clojure
+{% highlight clojure %}
 (ns restful-clojure.handler
   (:use compojure.core)
   (:require [compojure.handler :as handler]))
@@ -187,7 +187,7 @@ below to create an application that can count either up or down.
   (GET "/count-up/:to" [to] (str-to (Integer. to)))
   (GET "/count-down/:from" [from] (str-from (Integer. from))))
 
-```
+{% endhighlight %}
 
 ## Starting a web server
 
@@ -196,12 +196,12 @@ running locally, we'll start the server on our VM to mimick a more
 production-like environment. Change into the root of the repository (the
 directory that contains the `Vagrantfile`, and log onto your VM:
 
-```bash
+{% highlight shell %}
 vagrant up
 vagrant ssh
 cd /vagrant
 lein ring server-headless
-```
+{% endhighlight %}
 
 If all goes well, you should be able to visit
 `http://192.168.33.10:3000/count-up/10` on your host machine and see that your
@@ -217,14 +217,14 @@ remotely and interact with our server as it is running. If you want to play
 around with it, you can connect to the REPL on your VM using a number of tools,
 including Leiningen:
 
-```bash
+{% highlight shell %}
 lein repl :connect 192.168.33.10:9998
-```
+{% endhighlight %}
 
-```clojure
+{% highlight clojure %}
 (in-ns 'restful-clojure.handler)
 (defn str-to [num] "I forgot how to count!")
-```
+{% endhighlight %}
 
 Now if you reload `http://192.168.33.10:3000/count-up/10` in your browser, you
 should see "I forgot how to count!" Pretty cool, huh? Just remember that in the
@@ -255,7 +255,7 @@ response code with a JSON response body. Remove the existing test in
 `tests/restful_clojure/` and create `tests/restful_clojure/handler_test.clj`
 with the code below.
 
-```clojure
+{% highlight clojure %}
 (ns restful-clojure.handler-test
   (:use clojure.test
         ring.mock.request  
@@ -275,7 +275,7 @@ with the code below.
   (testing "not-found route"
     (let [response (app (request :get "/bogus-route"))]
       (is (= (:status response) 404)))))
-```
+{% endhighlight %}
 
 We're using the
 [clojure.test](http://richhickey.github.io/clojure/clojure.test-api.html)
@@ -285,9 +285,9 @@ Rspec and would like something a little more expressive, I'd recommend looking
 into [Midje](https://github.com/marick/Midje). Now let's run those tests and
 watch them fail.
 
-```bash
+{% highlight shell %}
 lein test
-```
+{% endhighlight %}
 
 ```
 lein test restful-clojure.handler-test
