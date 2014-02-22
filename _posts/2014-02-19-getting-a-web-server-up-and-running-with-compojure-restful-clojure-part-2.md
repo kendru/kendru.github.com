@@ -261,16 +261,7 @@ with the code below.
         ring.mock.request  
         restful-clojure.handler))
 
-; The deftest macro defines the context of a single test. You will generally
-; group multiple test cases under a deftest with the testing macro.
 (deftest test-app
-  
-  ; The testing macro names one or more assertions. Think of a testing block
-  ; as a single test case. It may contain multiple assertions, but they all
-  ; test a single unit. In this case, we are asserting that the HTTP status
-  ; code is 200 (success) and that the Content-Type header indicated a JSON
-  ; response body. Both assertions generally test that the HTTP response from
-  ; the "users" endpoint is what we expect.
   (testing "users endpoint"
     (let [response (app (request :get "/users"))]
       (is (= (:status response) 200))
