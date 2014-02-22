@@ -57,13 +57,13 @@ You'll need to download the lein script and place it somewhere on your path.
 Assuming you have a `bin` subdirectory inside your home directory, the
 following commands are all that is necessary to get started:
 
-{% highlight shell %}
+{% highlight bash %}
 wget https://raw.github.com/technomancy/leiningen/stable/bin/lein -O ~/bin/lein
 chmod a+x ~/bin/lein
 {% endhighlight %}
 
 With that, we can create our project with one command:
-{% highlight shell %}
+{% highlight bash %}
 lein new restful-clojure
 {% endhighlight %}
 
@@ -95,7 +95,7 @@ package for your OS. Vagrant uses
 download the latest version. Once you have Vagrant and VirtualBox installed,
 grab the project source from GitHub:
 
-{% highlight shell %}
+{% highlight bash %}
 git clone https://github.com/kendru/restful-clojure
 cd restful-clojure
 git checkout tags/part1
@@ -134,7 +134,7 @@ config.vm.synced_folder "./restful-clojure", "/vagrant"
 Finally, we configure Vagrant to provision our VM using Puppet. We create
 a `puppet` folder with `manifests` and `modules` subfolders.
 
-{% highlight shell %}
+{% highlight bash %}
 mkdir puppet puppet/manifests puppet/modules
 {% endhighlight %}
 
@@ -143,12 +143,12 @@ and the PostgreSQL database. Instead of manually writing all of the boilerplate
 Puppet code for setting up Java and Postgres, we'll use Puppet modules, which
 we'll add to our repo as git submodules If you have cloned the project from
 github, you can get the submodules by executing:
-{% highlight shell %}
+{% highlight bash %}
 git submodule update --init --recursive
 {% endhighlight %}
 Otherwise, add all of the puppet modules that we need as git submodules within
 puppet/modules:
-{% highlight shell %}
+{% highlight bash %}
 git submodule add https://github.com/puppetlabs/puppetlabs-stdlib.git puppet/modules/stdlib
 git submodule add https://github.com/puppetlabs/puppetlabs-postgresql.git puppet/modules/postgresql
 git submodule add https://github.com/puppetlabs/puppetlabs-concat.git puppet/modules/concat
@@ -200,7 +200,7 @@ include java7
 
 From this point, fire up your VM, and you should have your environment
 available:
-{% highlight shell %}
+{% highlight bash %}
 # If you have not yet started your vagrant box
 vagrant up
 # If you have already run 'vagrant up'

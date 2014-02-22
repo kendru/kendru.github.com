@@ -45,7 +45,7 @@ a dependency in Leiningen's `project.clj`.
 With our dependencies declared, let's fire up a REPL and build a quick server
 (Leiningen will download the dependencies before launching the repl):
 
-{% highlight shell %}
+{% highlight bash %}
 lein repl
 {% endhighlight %}
 {% highlight clojure %}
@@ -196,7 +196,7 @@ running locally, we'll start the server on our VM to mimick a more
 production-like environment. Change into the root of the repository (the
 directory that contains the `Vagrantfile`, and log onto your VM:
 
-{% highlight shell %}
+{% highlight bash %}
 vagrant up
 vagrant ssh
 cd /vagrant
@@ -217,7 +217,7 @@ remotely and interact with our server as it is running. If you want to play
 around with it, you can connect to the REPL on your VM using a number of tools,
 including Leiningen:
 
-{% highlight shell %}
+{% highlight bash %}
 lein repl :connect 192.168.33.10:9998
 {% endhighlight %}
 
@@ -285,7 +285,7 @@ Rspec and would like something a little more expressive, I'd recommend looking
 into [Midje](https://github.com/marick/Midje). Now let's run those tests and
 watch them fail.
 
-{% highlight shell %}
+{% highlight bash %}
 lein test
 {% endhighlight %}
 
