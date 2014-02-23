@@ -1,7 +1,8 @@
 ---
 layout: page
-title: (write andrew blog)
-tagline: Coding, startups, and software engineering
+title: kendru/write
+tagline: coding, startups, and software engineering
+description: a blog on software engineering (mainly Clojure at the moment) and startups
 ---
 {% include JB/setup %}
 
