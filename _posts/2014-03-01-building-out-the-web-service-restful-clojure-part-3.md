@@ -19,7 +19,7 @@ in the next tutorial - I promise!
 If you recall from the
 [last tutorial](/restful-clojure/2014/02/19/getting-a-web-server-up-and-running-with-compojure-restful-clojure-part-2/),
 we have a few tests that are currently failing. This is a good thing, because
-now we know exactly what we need to do to get the tests passing. For refernece,
+now we know exactly what we need to do to get the tests passing. For reference,
 here are the tests from last time:
 
 {% highlight clojure %}
@@ -59,8 +59,8 @@ a `not-found` route:
 {% endhighlight %}
 
 If you're like me, you might be wondering how the not-found route works. Well,
-since we're dealing with a clojure library, we're in luck! Go ahead and start
-up a repl (`lein repl` from the `restful_clojure` directory), and we can delve
+since we're dealing with a Clojure library, we're in luck! Go ahead and start
+up a REPL (`lein repl` from the `restful_clojure` directory), and we can delve
 into the code:
 
 {% highlight clojure %}
@@ -128,7 +128,7 @@ server's console:
     (handler req))) ; pass the request through to the inner handler
 
 ; We can attach our middleware directly to the main application handler. All
-; requests/responses will be "fitered" through our logging handler.
+; requests/responses will be "filtered" through our logging handler.
 (def app
   (-> app-routes
     wrap-log-request))
@@ -423,4 +423,144 @@ items.
 
 You know the drill. We start with the tests:
 
+(By the way, I know that unit tests are not the most riveting read, so please
+do not feel beholden to take in every line. I post the tests here in case you
+are interested in seeing some examples of ordinary tests in Clojure.)
+
+{% highlight clojure %}
+; test/restful_clojure/lists_test.clj
+(deftest add-products
+  (let [user (users/create {:name "Test user" :email "me@mytest.com"})
+        my-list (lists/create {:user_id (:id user) :title "My list"})
+        pintos (products/create {:title "Pinto Beans"
+                                 :description "Yummy beans for burritos"})]
+    (testing "Adds product to existing list"
+      (let [modified-list (lists/add-product my-list (:id pintos))]
+        (is (= [pintos] (:products modified-list)))))
+
+    (testing "Creates new list with products"
+      (let [listdata (lists/create {:user_id (:id user)
+                                    :title "Most interesting"
+                                    :products [pintos]})]
+        (is (= [pintos] (:products listdata)))
+        (is (= [pintos] (:products (lists/find-by-id (:id listdata)))))))
+
+    (testing "Creates products added with an update"
+      (let [listdata (lists/create {:user_id (:id user)
+                                    :title "Things to update"
+                                    :products [pintos]})
+            coffee (products/create {:title "Coffee Beans"
+                                     :description "No, not *THAT* Java"})
+            updated (lists/update-list (update-in listdata [:products] conj coffee))]
+        (is (= [pintos coffee] (:products updated)))
+        (is (= [pintos coffee] (:products (lists/find-by-id (:id listdata)))))))))
+
+(deftest remove-products
+  (let [user (users/create {:name "Test user" :email "me@mytest.com"})
+        kidneys (products/create {:title "Kidney Beans"
+                                  :description "Poor Charlie the Unicorn..."})
+        limas (products/create {:title "Lima Beans"
+                                :description "Yuck!"})
+        my-list (lists/create {:user_id (:id user)
+                               :title "My list"
+                               :products [kidneys limas]})]
+   (testing "Does not remove a product from the database entirely"
+     (let [fresh-list (lists/create {:user_id (:id user)
+                                     :title "My list"
+                                     :products [kidneys limas]})]
+       (lists/remove-product fresh-list (:id kidneys))
+       (is (not (nil? (products/find-by-id (:id kidneys)))))))
+    (testing "Removes a product from a list"
+      (let [modified-list (lists/remove-product my-list (:id kidneys))]
+        (is (= [limas] (:products modified-list)))))
+
+    (testing "Removes products absent from an update"
+      (let [coffee (products/create {:title "Coffee Beans"
+                                     :description "No, not *THAT* Java"})
+            listdata (lists/create {:user_id (:id user)
+                                    :title "Things to update"
+                                    :products [limas coffee]})
+            updated (lists/update-list (assoc listdata :products [coffee]))]
+        (is (= [coffee] (:products updated)))
+        (is (= [coffee] (:products (lists/find-by-id (:id listdata)))))))))
+{% endhighlight %}
+
+Although I just pasted all of these tests in at once, keep in mind that when
+writing code, I try to only write one (failing) test at a time, then write the
+code to implement it, but it would be distracting to have so many tiny code samples
+littering the post.
+
+There are a couple of interesting things going on here. First, we want to be
+able to associate products with a list when it is created and associate/disassociate
+them when the list is updated. Second, when we remove a product from a list, we
+want to be sure that we are just breaking the relationship between lists and
+products, not deleting the product entirely. Now the application code:
+
+{% highlight clojure %}
+; src/restful_clojure/models/lists.clj
+(defn add-product
+  "Add a product to a list with an optional status arg"
+  ([listdata product-id]
+    (add-product listdata product-id "incomplete"))
+  ([listdata product-id status]
+    (let [sql (str "INSERT INTO lists_products ("
+                   "list_id, product_id, status"
+                   ") VALUES ("
+                   "?, ?, ?::item_status"
+                   ")")]
+      (exec-raw [sql [(:id listdata) product-id status] :results])
+      (find-by-id (:id listdata)))))
+
+(defn remove-product [listdata product-id]
+  (delete "lists_products"
+    (where {:list_id (:id listdata)
+            :product_id product-id}))
+   (update-in listdata [:products]
+     (fn [products] (remove #(= (:id %) product-id) products))))
+
+(defn- get-product-ids-for
+  "Gets a set of all product ids that belong to a particular list"
+  [listdata]
+  (into #{}
+    (map :product_id
+      (select "lists_products"
+        (fields :product_id)
+        (where {:list_id (:id listdata)})))))
+
+(defn update-list [listdata]
+  (update e/lists
+    (set-fields (dissoc listdata :id :products))
+    (where {:id (:id listdata)}))
+  (let [existing-product-ids (get-product-ids-for listdata)
+        updated-product-ids (->> (:products listdata)
+                                 (map :id)
+                                 (into #{}))
+        to-add (difference updated-product-ids existing-product-ids)
+        to-remove (difference existing-product-ids updated-product-ids)]
+    (doseq [prod-id to-add]
+      (add-product listdata prod-id))
+    (doseq [prod-id to-remove]
+      (remove-product listdata prod-id))
+    (find-by-id (:id listdata))))
+{% endhighlight %}
+
+Notice that in the `add-product` function, we build up a query to execute
+against the database directly. This is because we are taking advantage of
+Postgres's [Enumerated Types](http://www.postgresql.org/docs/9.2/static/datatype-enum.html),
+which do not play nice with Korma. I am slowly becoming convinced that SQL is best
+written in SQL, so if I were to start this tutorial again, I would probably use
+something like [yesql](https://github.com/krisajenkins/yesql).
+
+Additionally, when we update a list we compare the set of products that are on
+the list at update time to the products that were previously on the list, adding
+the new products, and removing the products that are no longer present.
+
 ## Coming up next...
+
+Whew. That was a _lot_ of code! If you have made it this far, I applaud you. In
+the next tutorial, I will cover adding some basic authentication and authorization
+to the API using [buddy](https://github.com/funcool/buddy), which is a very
+flexible security library. After that, we'll create a simple ClojureScript client
+to consume our API - after all, what good is a service without anything to use it?
+Finally, we'll deploy the app to a [DigitalOcean server](https://www.digitalocean.com/?refcode=e06be03426e6)
+(disclaimer: affiliate link) using nginx as a reverse proxy and SSL terminator.

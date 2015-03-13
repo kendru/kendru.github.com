@@ -39,6 +39,8 @@ theme:
   str_prev: "Prev"
   str_continue_reading: "Continue reading"
 
+  feedurl: http://feeds.feedburner.com/kendru-write
+
   # Colours, typography and padding
   # Open the "_sass > base" folder, and open "_variables.scss"
 
