@@ -6,11 +6,10 @@ description: "With our configuration and build automated, now we set up a basic
 category: restful-clojure
 tags: ["clojure", "REST", "Compojure", "tutorial"]
 ---
-{% include JB/setup %}
 
 This tutorial is the second in a series on building a RESTful web service in
-Clojure. In the 
-[first tutorial](/restful-clojure/2014/02/16/writing-a-restful-web-service-in-clojure-part-1-setup/), 
+Clojure. In the
+[first tutorial](/restful-clojure/2014/02/16/writing-a-restful-web-service-in-clojure-part-1-setup/),
 we set up a development environment using Puppet and Vagrant, and we created
 a skeleton Leiningen project. With all of the prerequisites taken care of, now
 it's time to get our hands dirty with some code!
@@ -159,7 +158,7 @@ Compojure.
   :plugins [[lein-ring "0.8.10"]]
 
   ; See https://github.com/weavejester/lein-ring#web-server-options for the
-  ; various options available for the lein-ring plugin 
+  ; various options available for the lein-ring plugin
   :ring {:handler restful-clojure.handler/app
          :nrepl {:start? true
                  :port 9998}}
@@ -240,7 +239,7 @@ expected functionality is
 given portion of code is supposed to do
 - It's satisfying to see _your_ code transform a failing test into a passing
 test.
- 
+
 That said, tests are not an excuse to not think about the code you're writing.
 Just because a test passes does not mean that the code under test is elegant or
 efficient. Tests are just a tool in our toolbox to help us craft solid,
@@ -266,7 +265,7 @@ with the code below.
     (let [response (app (request :get "/users"))]
       (is (= (:status response) 200))
       (is (= (get-in response [:headers "Content-Type"]) "application-json"))))
-  
+
   (testing "lists endpoint"
     (let [response (app (request :get "/lists"))]
       (is (= (:status response) 200))

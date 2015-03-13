@@ -6,7 +6,6 @@ simplest implementation that works"
 category: "software-engineering"
 tags: ["simplity", "design"]
 ---
-{% include JB/setup %}
 
 ## Why simple?
 
@@ -155,4 +154,3 @@ left with a ton of kludge that you never end up using.
 
 Again, this is a very simplistic look at what simple code is and why we should
 strive for simplicity, but I hope it was helpful!
-

@@ -5,7 +5,6 @@ description: "Create a RESTful web service project in Clojure using Compojure, L
 category: restful-clojure
 tags: ["clojure", "REST", "Puppet", "Leiningen", "tutorial"]
 ---
-{% include JB/setup %}
 
 Over the next several posts, we'll be doing and end-to-end walkthrough of
 creating a RESTful web service using the [Clojure](http://clojure.org/)
@@ -22,7 +21,7 @@ end of the tutorial series, we'll build a simple javascript client application
 so that we can actually enjoy the fruits of our labour. You should be able to
 extend the application to create an awesome web or mobile app.
 
-All of the source code for this project is available as a 
+All of the source code for this project is available as a
 [GitHub repo](https://github.com/kendru/restful-clojure). Each part of the
 project has a corresponding branch that you can checkout for that specific
 part. For example, for this first tutorial, you can checkout `part2`.
@@ -88,7 +87,7 @@ following:
 ```
 
 Next up, let's install Vagrant. For this tutorial, I am running 1.4.3,
-but any 1.4 release should work. Head over to the 
+but any 1.4 release should work. Head over to the
 [Vagrant downloads](http://www.vagrantup.com/downloads) page to find the
 package for your OS. Vagrant uses
 [VirtualBox](https://www.virtualbox.org/wiki/Downloads) to host its VMs, so please

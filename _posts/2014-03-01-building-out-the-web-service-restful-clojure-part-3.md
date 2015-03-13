@@ -5,19 +5,18 @@ description: "Begin building out a RESTful web service with a JSON api, includin
 category: restful-clojure
 tags: ["clojure", "REST", "middleware", "testing", "tutorial"]
 ---
-{% include JB/setup %}
 
 <aside>
 Before we get started, I want to give a small disclaimer. At the end of
 the last tutorial, I mentioned that we would be dealing with authentication in
 this tutorial. However, once I started writing this tutorial, I realized that
-it would be _way_ too long to cover authentication. I will cover authentication
+it would be <em>way</em> too long to cover authentication. I will cover authentication
 in the next tutorial - I promise!
 </aside>
 
 ## Passing our tests
 
-If you recall from the 
+If you recall from the
 [last tutorial](/restful-clojure/2014/02/19/getting-a-web-server-up-and-running-with-compojure-restful-clojure-part-2/),
 we have a few tests that are currently failing. This is a good thing, because
 now we know exactly what we need to do to get the tests passing. For refernece,
@@ -104,7 +103,7 @@ application handler from the routes.
 
 In most applications, there are certain concerns (e.g. logging, authentication,
 content nedotiation, etc.) that we want to take care of at a high level. In
-some frameworks, these concerns are taken care of by a 
+some frameworks, these concerns are taken care of by a
 [Front Controller](http://en.wikipedia.org/wiki/Front_Controller_pattern) or
 plugin. With Ring, however, we can simply wrap our routes in another handler
 that does... well, pretty much anything we want it to. Can you feel the power?
@@ -171,7 +170,7 @@ Here's what the entire file should look like at this point:
 ; The wrap-json-response middleware will take care of converting this to a
 ; JSON string.
 (defroutes app-routes
-  (route/not-found 
+  (route/not-found
     (response {:message "Page not found"})))
 
 (defn wrap-log-request [handler]
@@ -295,7 +294,7 @@ lists:
     (let [count-orig (users/count-users)]
       (users/create {:name "Charlie" :email "charlie@example.com"})
       (is (= (inc count-orig) (users/count-users)))))
-  
+
   (testing "Retrieve user"
     (let [user (users/create {:name "Andrew" :email "me@mytest.com"})
           found-user (users/find-by-id (user :id))]
@@ -329,7 +328,7 @@ lists:
           user-count (users/count-users)]
       (users/delete-user user)
       (is (= (dec user-count) (users/count-users)))))
-  
+
   (testing "Deleted correct user"
     (let [user-keep (users/create {:name "Keep" :email "important@users.net"})
           user-del (users/create {:name "Delete" :email
@@ -425,5 +424,3 @@ items.
 You know the drill. We start with the tests:
 
 ## Coming up next...
-
-
