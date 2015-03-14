@@ -2,6 +2,11 @@
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://kedru.github.io" # the base hostname & protocol for your site
 permalink: pretty
+title: "Andrew Meredith"
+
+author:
+  name: "Andrew Meredith"
+  email: "andymeredith@gmail.com"
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
@@ -10,6 +15,8 @@ theme:
   # avatar: avatar.png
   gravatar: # Email MD5 hash
   description: "coding, startups, and software engineering"
+  production_url: "http://kedru.github.io"
+  author_name: "Andrew Meredith"
 
   # Header and footer text
   header_text: >
@@ -21,7 +28,7 @@ theme:
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: false
   github: "kendru"
   linkedin: http://www.linkedin.com/in/andrewsmeredith
   twitter: "asmeredith"

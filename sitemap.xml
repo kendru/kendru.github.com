@@ -33,7 +33,7 @@ hide: true
 		{% endif %}
 	</url>
 	{% endfor %}
-	{% for page in site.pages %}
+	{% for page in site.pages %}{% if page.hide != true %}
 	<url>
 		<loc>{{ site.url }}{{ page.url }}</loc>
 		{% if page.sitemap.lastmod %}
@@ -54,5 +54,5 @@ hide: true
 		<priority>0.3</priority>
 		{% endif %}
 	</url>
-	{% endfor %}
+	{% endif %}{% endfor %}
 </urlset>
