@@ -209,3 +209,10 @@ vagrant provision
 Congratulations - you now have a functional Leiningen project set up with
 a shiny new development VM to run it on! In [the next tutorial](/restful-clojure/2014/02/19/getting-a-web-server-up-and-running-with-compojure-restful-clojure-part-2/), we'll take our
 application from skeleton to basic web server with a few tests to boot.
+
+### Go To
+
+- Part 1: Setup
+- [Part 2: Getting a web server up and running](/restful-clojure/2014/02/19/getting-a-web-server-up-and-running-with-compojure-restful-clojure-part-2/)
+- [Part 3: Building out the web service](/restful-clojure/2014/03/01/building-out-the-web-service-restful-clojure-part-3/)
+- [Part 4: Securing the service](/restful-clojure/2015/03/13/securing-service-restful-clojure-part-4/)

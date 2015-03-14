@@ -313,3 +313,10 @@ with tests, of course).
 ---
 
 I would love to get your feedback on these tutorials! Useful or not useful?
+
+### Go To
+
+- [Part 1: Setup](/restful-clojure/2014/02/16/writing-a-restful-web-service-in-clojure-part-1-setup/)
+- Part 2: Getting a web server up and running
+- [Part 3: Building out the web service](/restful-clojure/2014/03/01/building-out-the-web-service-restful-clojure-part-3/)
+- [Part 4: Securing the service](/restful-clojure/2015/03/13/securing-service-restful-clojure-part-4/)

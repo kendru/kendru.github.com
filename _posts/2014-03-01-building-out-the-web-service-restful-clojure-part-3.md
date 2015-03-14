@@ -11,7 +11,7 @@ Before we get started, I want to give a small disclaimer. At the end of
 the last tutorial, I mentioned that we would be dealing with authentication in
 this tutorial. However, once I started writing this tutorial, I realized that
 it would be <em>way</em> too long to cover authentication. I will cover authentication
-in the next tutorial - I promise!
+in the <a href="/restful-clojure/2015/03/13/securing-service-restful-clojure-part-4/">next tutorial</a> - I promise!
 </aside>
 
 ## Passing our tests
@@ -243,8 +243,9 @@ migrations.
 $ pwd
 # /home/andrew/restful-clojure/restful-clojure
 $ mkdir migrations
-$ touch migrations/$(date "+%Y-%m-%d-%H%M%S")-add-initial-tables.up.sql
-$ touch migrations/$(date "+%Y-%m-%d-%H%M%S")-add-initial-tables.down.sql
+$ NOW=$(date "+%Y-%m-%d-%H%M%S")
+$ touch migrations/$NOW-add-initial-tables.up.sql
+$ touch migrations/$NOW-add-initial-tables.down.sql
 {% endhighlight %}
 
 The migrations are in
@@ -429,6 +430,7 @@ are interested in seeing some examples of ordinary tests in Clojure.)
 
 {% highlight clojure %}
 ; test/restful_clojure/lists_test.clj
+; ...
 (deftest add-products
   (let [user (users/create {:name "Test user" :email "me@mytest.com"})
         my-list (lists/create {:user_id (:id user) :title "My list"})
@@ -498,6 +500,7 @@ products, not deleting the product entirely. Now the application code:
 
 {% highlight clojure %}
 ; src/restful_clojure/models/lists.clj
+; ...
 (defn add-product
   "Add a product to a list with an optional status arg"
   ([listdata product-id]
@@ -558,9 +561,17 @@ the new products, and removing the products that are no longer present.
 ## Coming up next...
 
 Whew. That was a _lot_ of code! If you have made it this far, I applaud you. In
-the next tutorial, I will cover adding some basic authentication and authorization
+[the next tutorial](/restful-clojure/2015/03/13/securing-service-restful-clojure-part-4/),
+I will cover adding some basic authentication and authorization
 to the API using [buddy](https://github.com/funcool/buddy), which is a very
 flexible security library. After that, we'll create a simple ClojureScript client
 to consume our API - after all, what good is a service without anything to use it?
 Finally, we'll deploy the app to a [DigitalOcean server](https://www.digitalocean.com/?refcode=e06be03426e6)
 (disclaimer: affiliate link) using nginx as a reverse proxy and SSL terminator.
+
+### Go To
+
+- [Part 1: Setup](/restful-clojure/2014/02/16/writing-a-restful-web-service-in-clojure-part-1-setup/)
+- [Part 2: Getting a web server up and running](/restful-clojure/2014/02/19/getting-a-web-server-up-and-running-with-compojure-restful-clojure-part-2/)
+- Part 3: Building out the web service
+- [Part 4: Securing the service](/restful-clojure/2015/03/13/securing-service-restful-clojure-part-4/)
