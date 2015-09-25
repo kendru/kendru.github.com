@@ -89,31 +89,32 @@ As I said above, Ring is a thin abstraction over HTTP. Consider the following
 HTTP request and response below (with some formatting applied to the response
 body):
 
-```
-GET /page HTTP/1.1
-Host: localhost
-Accept: text/plain
+    GET /page HTTP/1.1
+    Host: localhost
+    Accept: text/plain
+    
+    HTTP/1.1 200 OK
+    Date: Sat, 22 Feb 2014 05:21:47 GMT
+    Content-Type: text/plain;charset=ISO-8859-1
+    Content-Length: 350
+    Server: Jetty(7.6.8.v20121106)
+    
+    {:ssl-client-cert nil,
+    :remote-addr "0:0:0:0:0:0:0:1",
+    :scheme :http,
+    :request-method :get,
+    :query-string nil,
+    :content-type nil,
+    :uri "/page",
+    :server-name "localhost",
+    :headers {"accept" "text/plain", "host" "localhost"},
+    :content-length nil,
+    :server-port 80,
+    :character-encoding nil,
+    :body #<HttpInput org.eclipse.jetty.server.HttpInput@2523a57f>}
+     
 
-HTTP/1.1 200 OK
-Date: Sat, 22 Feb 2014 05:21:47 GMT
-Content-Type: text/plain;charset=ISO-8859-1
-Content-Length: 350
-Server: Jetty(7.6.8.v20121106)
-
-{:ssl-client-cert nil,
-:remote-addr "0:0:0:0:0:0:0:1",
-:scheme :http,
-:request-method :get,
-:query-string nil,
-:content-type nil,
-:uri "/page",
-:server-name "localhost",
-:headers {"accept" "text/plain", "host" "localhost"},
-:content-length nil,
-:server-port 80,
-:character-encoding nil,
-:body #<HttpInput org.eclipse.jetty.server.HttpInput@2523a57f>}
-```
+ 
 
 <!-- TODO: Add graphic comparing HTTP request to request map -->
 
