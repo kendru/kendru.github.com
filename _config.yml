@@ -24,7 +24,7 @@ theme_settings:
 
      <p>-- C.S. Lewis, <em>Perelandra</em></p>
   footer_text: >
-   Copyright (c) 2015 Andrew Meredith
+   Copyright (c) 2016 Andrew Meredith
 
   # Icons
   rss: false
@@ -34,7 +34,7 @@ theme_settings:
   twitter: "asmeredith"
 
   # Scripts
-  #google_analytics: "UA-47033457-1"
+  google_analytics: "UA-47033457-1"
   disqus_shortname: kendru
   katex: false # Enable if using math markup
 
