@@ -15,7 +15,14 @@ layout: default
   <section class="post-content">
     {{ content }}
   </section>
-  
+
+  <footer class="sharing">
+    <h4>Share This</h4>
+
+{% if site.theme_settings.twitter %}
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ page.title | strip_html | trim }}" data-via="{{ site.theme_settings.twitter }}" data-related="{{ site.theme_settings.twitter }}" data-show-count="false">Tweet</a>
+  </footer>
+{% endif %}
 </article>
 
 <!-- Disqus -->
