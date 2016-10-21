@@ -9,7 +9,7 @@ author:
   email: "andymeredith@gmail.com"
 
 # THEME-SPECIFIC CONFIGURATION
-theme:
+theme_settings:
   # Meta
   title: "Andrew Meredith"
   # avatar: avatar.png
@@ -34,7 +34,7 @@ theme:
   twitter: "asmeredith"
 
   # Scripts
-  google_analytics: "UA-47033457-1"
+  #google_analytics: "UA-47033457-1"
   disqus_shortname: kendru
   katex: false # Enable if using math markup
 
@@ -51,13 +51,16 @@ theme:
   # Colours, typography and padding
   # Open the "_sass > base" folder, and open "_variables.scss"
 
+gems:
+  - jekyll-paginate
+
 # PAGINATION
 paginate: 5
 paginate_path: "blog/page:num"
 
 # BUILD SETTINGS
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
