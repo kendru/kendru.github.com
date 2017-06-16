@@ -95,9 +95,9 @@ download the latest version. Once you have Vagrant and VirtualBox installed,
 grab the project source from GitHub:
 
 {% highlight bash %}
-git clone https://github.com/kendru/restful-clojure
+git clone --recursive https://github.com/kendru/restful-clojure
 cd restful-clojure
-git checkout tags/part1
+git checkout part1
 {% endhighlight %}
 
 At this point, you can run `vagrant up` to download the vagrant box and boot
