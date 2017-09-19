@@ -8,7 +8,7 @@ tags: ["programming", "clojurescript", "modeling"]
 
 ClojureScript is a language designed for working with data. In this post, we'll
 look at how to use the builtin collection library as well as a few design patterns
-to model a domain. ClojureScript places a string emphasis on relying
+to model a domain. ClojureScript places a strong emphasis on relying on
 generic collection types and the standard functions that operate on them rather
 than creating highly specialized functions that only work on a single type of
 object. The object-oriented approach, which most mainstream languages encourage,
