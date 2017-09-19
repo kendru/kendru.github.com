@@ -35,6 +35,7 @@ theme_settings:
 
   # Scripts
   google_analytics: "UA-47033457-1"
+  google_ad_client: "ca-pub-6265787006533161"
   disqus_shortname: kendru
   katex: false # Enable if using math markup
 
