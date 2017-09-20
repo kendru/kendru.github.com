@@ -84,6 +84,17 @@ into the code:
 Expecting more? Sorry to disappoint! That is the beauty of lisp - that
 something like handling 404s can be handled with a 4 line function.
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6265787006533161"
+     data-ad-slot="3706397953"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 If you run the tests again, you'll notice that the last one is passing!
 However, we're creating a JSON string directly in our code - yuck! Before we
 move on to implementing the `/users` and `/lists` endpoints, let's introduce
