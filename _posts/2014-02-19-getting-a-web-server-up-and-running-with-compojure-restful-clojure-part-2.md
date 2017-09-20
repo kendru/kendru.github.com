@@ -114,9 +114,16 @@ body):
     :body #<HttpInput org.eclipse.jetty.server.HttpInput@2523a57f>}
      
 
- 
-
-<!-- TODO: Add graphic comparing HTTP request to request map -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6265787006533161"
+     data-ad-slot="3706397953"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 You can see how Ring converted our request into a map, which is just a Clojure
 datatype. We now have all of the power of Clojure to pull apart that request to

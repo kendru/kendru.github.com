@@ -1,4 +1,4 @@
----
+
 layout: post
 title: "Writing a RESTful web service in Clojure | Part 1: Setup"
 description: "Create a RESTful web service project in Clojure using Compojure, Liberator, and Korma"
@@ -85,6 +85,17 @@ following:
     ├── src
     └── test
 ```
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6265787006533161"
+     data-ad-slot="3706397953"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 Next up, let's install Vagrant. For this tutorial, I am running 1.4.3,
 but any 1.4 release should work. Head over to the
