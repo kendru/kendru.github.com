@@ -8,15 +8,15 @@ tags: ["javascript", "algorithm"]
 
 Recently I was looking into options to add rate limiting to a specific endpoint
 in an application at work. Most endpoints are only exposed internally, and we
-are careful to not make more requests than the system can handle, but in this
-one case, the endpoint is open to our customers, and it runs some pretty intensive
+are careful to not make more requests than the system can handle. However, in one
+case, the endpoint is open to our customers, and it runs some pretty intensive
 database operations, so we wanted to limit the rate at which clients can make
 requests. This functionality is available in pretty much every API gateway out
-there as well as in a lot of [reverse proxies](https://www.nginx.com/blog/rate-limiting-nginx/),
-but in our case, application updates are easier to make than config updates, so
-we wanted a simple solution that we could deploy as part of our Node.js app.
+there as well as in a lot of [reverse proxies](https://www.nginx.com/blog/rate-limiting-nginx/).
+In our case, application updates are easier to make than config updates, so we
+opted for a simple solution that we could deploy as part of our Node.js app.
 
-Enter the Token Bucket.
+Enter the *Token Bucket*.
 
 A token bucket is an algorithm that allows _tokens_ to be accumulated over time
 at a specific rate. These tokens can then be "redeemed" to execute some action.
@@ -26,8 +26,6 @@ have a bucket that holds some number of balls, say 100. When there are fewer tha
 of 1 ball per second until it is full again. We can take as many balls as we want
 as quickly as we want, but once the bucket is empty, we have to wait for it to start
 filling up again before we can take more.
-
-IMAGE HERE
 
 If we use a token bucket to rate limit an API, then it allows us to set a request
 rate (the rate at which tokens are added to the bucket) with the ability to *burst*
@@ -71,8 +69,8 @@ class TokenBucket {
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-We could then use this in a Node.js/express application to limit
-the requests made to a particular endpoint:
+We could then use this in a Node.js/express application to limit the
+number of requests made to a particular endpoint:
 
 ```javascript
 const express = require('express');
@@ -103,9 +101,9 @@ app.listen(3000, () => console.log('Server is running'));
 ```
 
 In this example, the `/` endpoint is restricted to serving 5 requests per
-second across all clients. If we wanted to have a per-IP limit or something
-similar, then we could keep a map of IP address to token bucket, creating a
-new token bucket every time we encounter a new IP address, as in the following
+second across all clients. If we wanted to have a per-client limit , then we
+could keep a map of IP address (or API keys) to token bucket, creating a
+new token bucket every time we encounter a new client, as in the following
 example:
 
 ```javascript
