@@ -78,7 +78,7 @@ OTP.
 
 #### Pattern matching
 
-First off, Elixir has an `if/else` construct, but I haven't used it. Insteadhttp://erlang.org/doc/apps/mnesia/Mnesia_overview.html, I am
+First off, Elixir has an `if/else` construct, but I haven't used it. Instead, I am
 relying on pattern matching and functions with multiple parameter lists and bodies.
 For example, I might write something like the following in JavaScript:
 
