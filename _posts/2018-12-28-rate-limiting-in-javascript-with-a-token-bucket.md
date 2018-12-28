@@ -32,6 +32,19 @@ rate (the rate at which tokens are added to the bucket) with the ability to *bur
 above this rate for a short period (until we have drained the capacity of the bucket).
 Let's take a first pass at implementing a token bucket.
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6265787006533161"
+     data-ad-slot="3706397953"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+#### Initial TokenBucket Implementation
+
 ```javascript
 class TokenBucket {
 
@@ -58,19 +71,10 @@ class TokenBucket {
 }
 ```
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-6265787006533161"
-     data-ad-slot="3706397953"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 We could then use this in a Node.js/express application to limit the
 number of requests made to a particular endpoint:
+
+#### Rate Limiting with TokenBucket
 
 ```javascript
 const express = require('express');
@@ -106,6 +110,8 @@ could keep a map of IP address (or API keys) to token bucket, creating a
 new token bucket every time we encounter a new client, as in the following
 example:
 
+#### Rate Limiting by IP
+
 ```javascript
 function limitRequests(perSecond, maxBurst) {
     const buckets = new Map();
@@ -116,7 +122,7 @@ function limitRequests(perSecond, maxBurst) {
             buckets.set(req.ip, new TokenBucket(maxBurst, perSecond));
         }
 
-        const bucketForIP = buckets.has(req.ip);
+        const bucketForIP = buckets.get(req.ip);
         if (bucketForIP.take()) {
             next();
         } else {
@@ -132,6 +138,8 @@ timers to refill buckets. In practice, we would probably want to remove the toke
 buckets after some time, and we would also want to defer adding tokens until
 they are requested, which will eliminate the need for JavaScript timers. Here is
 our new timer-free `TokenBucket` implementation:
+
+#### Timer-Free TokenBucket
 
 ```javascript
 class TokenBucket {
@@ -169,3 +177,14 @@ This implementation should be have the same, but it only does work when `take()`
 which should be more efficient in most cases.
 
 Please leave a comment to let me know if this post was useful!
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6265787006533161"
+     data-ad-slot="3706397953"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
