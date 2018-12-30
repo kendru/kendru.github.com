@@ -1,0 +1,4 @@
+This is a Brave Payments publisher verification file.
+
+Domain: kendru.github.io 
+Token: 1181f163eedc7b8adb9ac55898bb8b2f442c248c0e1235e4424487087ab4bd95
