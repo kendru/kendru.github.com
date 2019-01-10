@@ -60,5 +60,22 @@ received. If the timestamp on the incoming message is greater, then it sets its 
 equal to that of the incoming message. Finally, the proccess increments is timestamp.
 
 Given these very simple rules, we can ensure that if one event somehow effects another that we will
-always be able to see them in the correct order. In terms of code, we could implement a simple
-command-line app that allows us to see how this process works. We will use UDP to communicate
+always be able to see them in the correct order. In order to see how this process works, we will
+implement a simple command-line app.
+
+## Creating a cluster
+
+Now it's time for a little code. We will create a binary that starts up a TCP server and binds to a
+user-specified port to listen for incoming connections from other processes. It also starts an
+interactive console that allows the users to issue commands to instruct it to join or leave a cluster
+or send messages to the other nodes in the cluster.
+
+TODO: Image here
+
+The processes will communicate by sending [bincode](https://github.com/TyOverby/bincode) messages over
+TCP. This is not the most efficient implementation, as it requires us to maintain a TCP connection
+between every pair of nodes in the cluster. In our case, this is fine, but for a production environment,
+a more formalized RPC framework would be a good bet, and cluster messages should be broadcast using a
+gossip protocol (stay tuned!) or similar to avoid linear scaling of TCP connections and network traffic
+as more nodes are added to the cluster.
+
