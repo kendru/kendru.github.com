@@ -60,17 +60,6 @@ We now know enough to create some sample data. Let's start at the "bottom" with
 the simplest models and work our way up to the higher-level models. Since an
 _event_ does not depend on any other model, it is a good place to start.
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-6265787006533161"
-     data-ad-slot="3706397953"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 ### Modeling Events
 
 An event is some action that the user performs while interacting with a web

@@ -99,17 +99,6 @@ some middleware to our app, it makes sense to go ahead and separate our
 application handler from the routes.
 </aside>
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-6265787006533161"
-     data-ad-slot="3706397953"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 ## Wiring custom Ring middleware
 
 In most applications, there are certain concerns (e.g. logging, authentication,
