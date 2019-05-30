@@ -55,19 +55,6 @@ similar to Clojure's threading macro (`->`). Overall, the language has a pretty
 friendly syntax, and it felt familiar to my, having worked with both Ruby and
 some functional languages in the past.
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-6265787006533161"
-     data-ad-slot="3706397953"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
-
-
 ### The Best Parts
 
 The nice syntax meant that there was a low barrier to entry, but it's not what is
