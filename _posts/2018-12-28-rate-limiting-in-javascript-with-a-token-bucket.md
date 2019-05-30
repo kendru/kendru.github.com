@@ -32,17 +32,6 @@ rate (the rate at which tokens are added to the bucket) with the ability to *bur
 above this rate for a short period (until we have drained the capacity of the bucket).
 Let's take a first pass at implementing a token bucket.
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-6265787006533161"
-     data-ad-slot="3706397953"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 #### Initial TokenBucket Implementation
 
 ```javascript
@@ -177,14 +166,3 @@ This implementation should be have the same, but it only does work when `take()`
 which should be more efficient in most cases.
 
 Please leave a comment to let me know if this post was useful!
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-6265787006533161"
-     data-ad-slot="3706397953"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
