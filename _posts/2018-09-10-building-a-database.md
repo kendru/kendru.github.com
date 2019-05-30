@@ -37,17 +37,6 @@ develop database systems that act as both transactional engines and data
 warehouses. Particularly, I believe that in-memory (or primarily in-memory)
 databases are the key to unlocking this sort of system.
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-6265787006533161"
-     data-ad-slot="3706397953"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 This is not a novel idea, and there are a number of databases out there that
 do in fact have a similar design: [HyPer](https://hyper-db.de/), which is now
 part of Tableau, and [Kudu](https://kudu.apache.org/) come to mind. There are
