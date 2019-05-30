@@ -86,17 +86,6 @@ following:
     └── test
 ```
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-6265787006533161"
-     data-ad-slot="3706397953"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 Next up, let's install Vagrant. For this tutorial, I am running 1.4.3,
 but any 1.4 release should work. Head over to the
 [Vagrant downloads](http://www.vagrantup.com/downloads) page to find the
