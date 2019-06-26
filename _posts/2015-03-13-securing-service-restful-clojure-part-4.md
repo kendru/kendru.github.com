@@ -436,7 +436,7 @@ web service or application of this scale.
 If you do not have the code for this tutorial, I'd recommend checking it out
 from [its GitHub repo](https://github.com/kendru/restful-clojure) and playing
 around with it. If you have been walking through these tutorials from
-[part 1](/restful-clojure/2014/02/16/writing-a-restful-web-service-in-clojure-part-1-setup/),
+[part 1](/2014/02/16/writing-a-restful-web-service-in-clojure-part-1-setup/),
 then you should now have a complete, albeit simple, API server that you can deploy
 and build a front-end app on!
 
@@ -451,7 +451,7 @@ we will deploy it to a DigitalOcean droplet. Stay tuned!
 
 ### Go To
 
-- [Part 1: Setup](/restful-clojure/2014/02/16/writing-a-restful-web-service-in-clojure-part-1-setup/)
+- [Part 1: Setup](/2014/02/16/writing-a-restful-web-service-in-clojure-part-1-setup/)
 - [Part 2: Getting a web server up and running](/restful-clojure/2014/02/19/getting-a-web-server-up-and-running-with-compojure-restful-clojure-part-2/)
 - [Part 3: Building out the web service](/restful-clojure/2014/03/01/building-out-the-web-service-restful-clojure-part-3/)
 - Part 4: Securing the service
