@@ -1,4 +1,4 @@
-
+---
 layout: post
 title: "Writing a RESTful web service in Clojure | Part 1: Setup"
 description: "Create a RESTful web service project in Clojure using Compojure, Liberator, and Korma"
