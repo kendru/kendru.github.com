@@ -266,10 +266,10 @@ of any new project.
 ### Quick Review
 
 - Which of the following projects would be a good fit for ClojureScript?
-- - single-page app such as a dashboard for a CMS
-- - adding animations to a static page
-- - web-based game with complex asynchronous user interactions
-- - CPU-intensive number-crunching simulations
+  - single-page app such as a dashboard for a CMS
+  - adding animations to a static page
+  - web-based game with complex asynchronous user interactions
+  - CPU-intensive number-crunching simulations
 - Does ClojureScript use the same module systems as JavaScript (CommonJS,
 and ES2015)?
 
