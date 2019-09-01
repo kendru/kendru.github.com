@@ -1,12 +1,10 @@
 ---
 layout: post
-title: "Why ClojureScript Matters | Learning ClojureScript - Chapter 1"
+title: "Why ClojureScript Matters"
 description: "In this chapter, we learn why JavaScript programmers should bother learning ClojureScript"
 category: Learning ClojureScript
 tags: ["clojurescript", "javascript", "functional-programming"]
 ---
-
-## About the series
 
 A few years ago, I started writing a book on ClojureScript that was geared towards JavaScript
 programmers. At the time, the best resources for learning ClojureScript were aimed at existing
