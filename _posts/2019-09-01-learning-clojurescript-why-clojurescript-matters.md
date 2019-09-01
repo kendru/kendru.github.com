@@ -55,7 +55,7 @@ language excels at building modular, high-performance user interfaces.
 Finally, we will see how the simple elegance of the language makes
 ClojureScript a joy to work with.
 
-== Introducing ClojureScript
+## Introducing ClojureScript
 
 At the fundamental level, ClojureScript is a dialect of the Clojure
 programming language that compiles to JavaScript. Clojure was created
