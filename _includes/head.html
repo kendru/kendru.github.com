@@ -42,13 +42,15 @@
 	</script>
 	{% endif %}
 	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-	
+
+	{% if site.theme_settings.quantummetric %}
 	<script type="text/javascript">
 	(function() {
 	    var qtm = document.createElement('script'); qtm.type = 'text/javascript'; qtm.defer = 1;
-	    qtm.src = 'https://cdn.quantummetric.com/qscripts/quantum-meredithdev.js';
+	    qtm.src = '{{ site.theme_settings.quantummetric }}';
 	    var d = document.getElementsByTagName('script')[0];
 	    !window.QuantumMetricAPI && d.parentNode.insertBefore(qtm, d);
 	})();
 	</script>
+	{% endif %}
 </head>

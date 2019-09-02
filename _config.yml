@@ -38,6 +38,7 @@ theme_settings:
   google_ad_client: "ca-pub-6265787006533161"
   disqus_shortname: kendru
   katex: false # Enable if using math markup
+  quantummetric: "https://cdn.quantummetric.com/qscripts/quantum-meredithdev.js"
 
   # Localization strings
   str_follow_on: "Follow on"
@@ -65,3 +66,6 @@ highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
+
+plugins:
+  - jekyll-redirect-from

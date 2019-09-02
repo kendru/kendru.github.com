@@ -1,8 +1,11 @@
 ---
 layout: post
 title: "Why ClojureScript Matters"
+redirect_from:
+  - /learning%20clojurescript/2019/09/01/learning-clojurescript-why-clojurescript-matters/
+  - /learning clojurescript/2019/09/01/learning-clojurescript-why-clojurescript-matters/
 description: "In this chapter, we learn why JavaScript programmers should bother learning ClojureScript"
-category: Learning ClojureScript
+category: learn-clojurescript
 tags: ["clojurescript", "javascript", "functional-programming"]
 ---
 
@@ -98,7 +101,7 @@ JavaScript can be written in several different styles, we'll look at an
 objected oriented example as well as a functional example.
 
 
-![Object-Oriented JavaScript function calls](/img/learning-cljs/chapter1/oop-js-func.png)
+![Object-Oriented JavaScript function calls](/img/learn-cljs/chapter1/oop-js-func.png)
 
 _Object-Oriented JavaScript function calls_
 
@@ -106,7 +109,7 @@ This object-oriented style is very familiar to most JavaScript programmers and
 requires little explanation. Next, we'll look at the perhaps slightly less
 familiar functional style. This style is widely used in _lodash_ and similar libraries.
 
-![Functional JavaScript function calls](/img/learning-cljs/chapter1/func-js-func.png)
+![Functional JavaScript function calls](/img/learn-cljs/chapter1/func-js-func.png)
 
 _Functional JavaScript function calls_
 
@@ -116,7 +119,7 @@ were in the JavaScript versions. In fact, the only differences from the
 functional JavaScript code is that the left parenthesis is moved to the left and
 there is no comma between arguments.
 
-![ClojureScript function call](/img/learning-cljs/chapter1/cljs-func.png)
+![ClojureScript function call](/img/learn-cljs/chapter1/cljs-func.png)
 
 _ClojureScript function call_
 
@@ -198,7 +201,7 @@ actually better in ClojureScript, because we can be selective about which
 components we even need to render to the virtual DOM, saving additional CPU
 cycles.
 
-![Optimizing a UI with immutable data structures](/img/learning-cljs/chapter1/ui-optimization-tree.png)
+![Optimizing a UI with immutable data structures](/img/learn-cljs/chapter1/ui-optimization-tree.png)
 
 _Optimizing a UI with immutable data structures_
 
@@ -404,9 +407,9 @@ is similar to a JavaScript array.
 Like the JavaScript code, this defines a sequence of numbers then logs a
 statement to the console for each of the numbers. It even looks pretty similar
 to the object-oriented version with the exception that `doseq` is not attached
-to a particular object prototype. However, this - along with some minor variations
-- is how you can expect it to look when you need to iterate over a collection
-in ClojureScript. Always.
+to a particular object prototype. However, this - along with some minor
+variations - is how you can expect it to look when you need to iterate over a
+collection in ClojureScript. Always.
 
 ### A Powerful Language
 
@@ -422,7 +425,7 @@ an extensive collection API, macros that allow for extension of the language
 itself, and the entire Google Closure library available by default,
 ClojureScript provides more powerful tools for constructing applications.
 
-![Spectrum of programming languages](/img/learning-cljs/chapter1/lang-spectrum.png)
+![Spectrum of programming languages](/img/learn-cljs/chapter1/lang-spectrum.png)
 
 _Spectrum of programming languages_
 
