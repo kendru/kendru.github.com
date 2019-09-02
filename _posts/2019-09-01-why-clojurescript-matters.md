@@ -4,6 +4,7 @@ title: "Why ClojureScript Matters"
 redirect_from:
   - /learning%20clojurescript/2019/09/01/learning-clojurescript-why-clojurescript-matters/
   - /learning clojurescript/2019/09/01/learning-clojurescript-why-clojurescript-matters/
+  - /learn-clojurescript/2019/09/01/learning-clojurescript-why-clojurescript-matters/
 description: "In this chapter, we learn why JavaScript programmers should bother learning ClojureScript"
 category: learn-clojurescript
 tags: ["clojurescript", "javascript", "functional-programming"]
