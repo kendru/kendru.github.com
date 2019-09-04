@@ -25,7 +25,7 @@ to better represent the state of JavaScript today, I have tried to update the Ja
 snippets in these posts and rewrite some of the sections comparing the two languages. I hope that
 you enjoy reading these posts and that they can be of some use to new ClojureScript programmers!
 
-## In this chapter:
+**In this chapter:**
 
 - What is ClojureScript?
 - What makes ClojureScript unique?
