@@ -32,6 +32,7 @@ theme_settings:
   github: "kendru"
   linkedin: http://www.linkedin.com/in/andrewsmeredith
   twitter: "asmeredith"
+  dev_url: "https://dev.to/kendru"
 
   # Scripts
   google_analytics: "UA-47033457-1"
