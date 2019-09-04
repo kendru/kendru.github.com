@@ -6,18 +6,18 @@ category: learn-clojurescript
 tags: ["clojurescript", "javascript", "functional-programming"]
 ---
 
-**In this chapter:**
-
-- What problems in JavaScript does ClojureScript try to solve?
-- How using a compiled language helps in application development
-- Why is JavaScript an ideal platform for ClojureScript?
-
 Now that we have a good idea of what ClojureScript is and how to use it, we will
 continue to pull back the curtain to get a clearer picture of how this curious
 language fits into its environment - the JavaScript ecosystem. While the
 language is quite different from JavaScript, it maintains a symbiotic
 relationship to its JavaScript host. JavaScript needs ClojureScript, and
 ClojureScript needs JavaScript. Let's explore this interesting symbiosis.
+
+**In this chapter:**
+
+- What problems in JavaScript does ClojureScript try to solve?
+- How using a compiled language helps in application development
+- Why is JavaScript an ideal platform for ClojureScript?
 
 ## Why JavaScript Needs Clojure
 
