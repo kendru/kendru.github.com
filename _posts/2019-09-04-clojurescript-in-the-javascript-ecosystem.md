@@ -30,10 +30,11 @@ for anything more complex, JavaScript does in fact _need_ a language like
 Clojure to enable more productive and enjoyable development.
 
 > **Clojure(Script)**
+>
 > You may have noticed several times where I have used the terms "Clojure" and
 > "ClojureScript" interchangeably. Clojure as a language has implementations that
 > compile to both Java bytecode and to JavaScript. Some of the potential confusion
-> comes from the fact that "Clojure" refers to both the language its Java
+> comes from the fact that "Clojure" refers to both the language and its Java
 > implementation. I will follow the general pattern of the Clojure community of
 > using the two terms interchangeably when talking about the language itself and
 > using "ClojureScript" when discussing the ecosystem or language features that
@@ -204,6 +205,7 @@ weight style afforded by these JavaScript UI technologies.
 
 
 > **ClojureScript on the Desktop**
+>
 > The developers of the LightTable editor - one of the most popular editors
 > supporting the Clojure language - opted to build their UI using ClojureScript
 > and deploy inside Electron. This enabled them to build an incredibly flexible,

@@ -457,8 +457,7 @@ a mapping of some input value to some output value.
 | Paradigm | Description | Key Concepts |
 | -------- | ----------- | ------------ |
 | Imperative | Describes a program as a sequence of statements that may modify the program state, receive input, or produce output. | Variables, loops, assignment, statements, subroutines |
-| Object-Oriented | Models the real world in terms of objects, their behaviors, and their
-interactions with each other. | Objects, classes or prototypes, methods, messages, object graphs |
+| Object-Oriented | Models the real world in terms of objects, their behaviors, and their interactions with each other. | Objects, classes or prototypes, methods, messages, object graphs |
 | Functional | Describes a program as a transformation of some input value to some output value using functions that can be composed. | Pure functions, immutable values, higher-order functions |
 
 While functional programming in JavaScript is gaining momentum, the majority of
