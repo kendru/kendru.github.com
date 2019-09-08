@@ -173,8 +173,8 @@ contents of some element would be updated with the value of the counter.
 var counter = 0;
 var users = [ /* ... */ ];
 
-for (var i = 0; i < users.length; i++) {
-    if (isMissingPhone(users[i])) {
+for (let user of users) {
+    if (isMissingPhone(user)) {
         counter++;
     }
 }
