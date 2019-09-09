@@ -15,6 +15,9 @@ article {
   }
   .footnotes {
     font-size: 0.9em;
+    p, div {
+      display: inline;
+    }
   }
 }
 header {
