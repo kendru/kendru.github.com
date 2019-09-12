@@ -292,9 +292,7 @@ requests.
 {% endhighlight %}
 
 For the purpose of this application, we will use OpenWeatherMap's forecast data
-API. Use of the API is free, but an account is required to obtain an API key.
-footnote:[You may sign up for an account and API key at
-https://home.openweathermap.org/users/sign_up]
+API. Use of the API is free, but [an account is required to obtain an API key](https://home.openweathermap.org/users/sign_up).
 
 With just 2 additional functions, we can enable communication with a remote API
 and hook the results into our user interface. While there is some unfamiliar
