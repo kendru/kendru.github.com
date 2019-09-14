@@ -283,3 +283,8 @@ Now that we have a good understanding of both what ClojureScript is and how it
 is related to the JavaScript platform, we are ready to see the language in
 action. In the next section, we will work through the process of writing a
 ClojureScript application, learning the common tools and practices as we go.
+
+### Go To
+
+- [Previous: Why ClojureScript Matters](/learn-clojurescript/2019/09/01/why-clojurescript-matters/)
+- [Next: Building Blocks](/learn-clojurescript/2019/09/05/building-blocks/)

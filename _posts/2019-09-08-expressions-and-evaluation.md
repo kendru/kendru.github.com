@@ -378,3 +378,8 @@ explicit. We can now:
 - Define the difference between _execution_ of a set of statements and
 _evaluation_ of an expression
 - Read ClojureScript's s-expression syntax
+
+### Go To
+
+- [Previous: Building Blocks](/learn-clojurescript/2019/09/05/building-blocks/)
+- [Next: Bootstrapping a ClojureScript Project](/learn-clojurescript/2019/09/09/bootstrapping-clojurescript-project/)

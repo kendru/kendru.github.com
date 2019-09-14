@@ -242,3 +242,7 @@ can now:
 - Explain what a var is and how it is referred to by a symbol
 - Define global bindings using `def`
 - Define local bindings using `let`
+
+### Go To
+
+- [Previous: Capstone 1 - Weather Forecasting App](/learn-clojurescript/2019/09/12/weather-forecasting-app/)

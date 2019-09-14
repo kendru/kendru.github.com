@@ -495,3 +495,7 @@ shares much in common with JavaScript. We should now understand:
 
 - What ClojureScript is and what sets it apart from JavaScript
 - What types of apps are the best fit for ClojureScript
+
+### Go To
+
+- [Next: ClojureScript in the JavaScript Ecosystem](/learn-clojurescript/2019/09/04/clojurescript-in-the-javascript-ecosystem/)

@@ -374,3 +374,8 @@ enjoy much quicker feedback that we normally get with JavaScript. We now know:
 - How to start Figwheel from the command line
 - How Figwheel reloads code when it changes
 - How to write code that is conducive to reloading
+
+### Go To
+
+- [Previous: Bootstrapping a ClojureScript Project](/learn-clojurescript/2019/09/09/bootstrapping-clojurescript-project/)
+- [Next: REPL Crash Course](/learn-clojurescript/2019/09/11/repl-crash-course/)
