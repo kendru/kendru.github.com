@@ -501,3 +501,7 @@ of control structures - loops.
 ---
 
 [^1]: We have come across some code samples that have used conditionals because they are almost unavoidable for any interesting program.
+
+### Go To
+
+- [Previous: Variables and Values](/learn-clojurescript/2019/09/13/variables-adnd-values/)

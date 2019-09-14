@@ -2,7 +2,7 @@
 layout: post
 title: "Ordering | Distributed Systems Fundamentals, Pt. 1"
 description: "Lamport timestamps, vector clocks, and ordering in a distributed system"
-category: Database
+category: distributed-systems-fundamentals
 tags: ["database", "architecture", "distributed systems", "ordering"]
 ---
 

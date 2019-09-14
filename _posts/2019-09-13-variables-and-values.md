@@ -246,3 +246,4 @@ can now:
 ### Go To
 
 - [Previous: Capstone 1 - Weather Forecasting App](/learn-clojurescript/2019/09/12/weather-forecasting-app/)
+- [Next: Making Choices](/learn-clojurescript/2019/09/13/making-choices/)
