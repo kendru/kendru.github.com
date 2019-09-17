@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Making Choices"
-description: "Take what we have learned about ClojureScript to build a weather forecasting app"
+description: "Learn the ways to handle branching control flow in ClojureScript"
 category: learn-clojurescript
 tags: ["clojurescript"]
 ---
@@ -375,7 +375,7 @@ and _everything else_ is truthy.
 >
 > `false` and `nil` are falsy, and all other values are truthy.
 
-### Quick Check
+### Quick Review
 
 - What is the value of `(if TEST "Truthy" "Falsy")` for each of the following
 values for "TEST":
@@ -505,3 +505,4 @@ of control structures - loops.
 ### Go To
 
 - [Previous: Variables and Values](/learn-clojurescript/2019/09/13/variables-adnd-values/)
+- [Next: Looping](/learn-clojurescript/2019/09/16/looping/)
