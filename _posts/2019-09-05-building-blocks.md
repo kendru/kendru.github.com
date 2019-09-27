@@ -4,6 +4,7 @@ title: "Building Blocks"
 description: "In this chapter, we examine how ClojureScript relates to its host language - JavaScript"
 category: learn-clojurescript
 tags: ["clojurescript", "javascript", "functional-programming"]
+hidden: true
 ---
 
 With an understanding of what ClojureScript is and why it matters, we will

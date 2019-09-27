@@ -4,6 +4,7 @@ title: "Using Variables and Values"
 description: "Understanding how values are represented in ClojureScript"
 category: learn-clojurescript
 tags: ["clojurescript"]
+hidden: true
 ---
 
 ClojureScript takes what we think we know about variables and turns it on its

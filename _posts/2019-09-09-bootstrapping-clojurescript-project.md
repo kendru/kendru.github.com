@@ -4,6 +4,7 @@ title: "Bootstrapping a ClojureScript Project"
 description: "How to start a ClojureScript project from scratch"
 category: learn-clojurescript
 tags: ["clojurescript", "javascript"]
+hidden: true
 ---
 
 Until this point, our discussion of ClojureScript has been largely

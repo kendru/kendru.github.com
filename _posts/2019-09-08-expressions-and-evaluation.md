@@ -4,6 +4,7 @@ title: "Expressions and Evaluation"
 description: "A close look at how expressions are evaluated in ClojureScript"
 category: learn-clojurescript
 tags: ["clojurescript", "javascript", "functional-programming"]
+hidden: true
 ---
 
 As we briefly touched on in the previous chapter, the concept an _expression_ is

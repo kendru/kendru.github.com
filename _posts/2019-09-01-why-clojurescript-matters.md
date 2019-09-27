@@ -8,6 +8,7 @@ redirect_from:
 description: "In this chapter, we learn why JavaScript programmers should bother learning ClojureScript"
 category: learn-clojurescript
 tags: ["clojurescript", "javascript", "functional-programming"]
+hidden: true
 ---
 
 A few years ago, I started writing a book on ClojureScript that was geared towards JavaScript

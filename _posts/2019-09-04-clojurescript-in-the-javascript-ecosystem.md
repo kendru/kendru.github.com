@@ -4,6 +4,7 @@ title: "ClojureScript in the JavaScript Ecosystem"
 description: "In this chapter, we examine how ClojureScript relates to its host language - JavaScript"
 category: learn-clojurescript
 tags: ["clojurescript", "javascript", "functional-programming"]
+hidden: true
 ---
 
 Now that we have a good idea of what ClojureScript is and how to use it, we will

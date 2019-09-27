@@ -4,6 +4,7 @@ title: "Capstone 1 - Weather Forecasting App"
 description: "Take what we have learned about ClojureScript to build a weather forecasting app"
 category: learn-clojurescript
 tags: ["clojurescript", "javascript", "reagent"]
+hidden: true
 ---
 
 Over the past couple of chapters, we have been getting familiar with the most

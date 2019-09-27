@@ -4,6 +4,7 @@ title: "Receiving Rapid Feedback with Figwheel"
 description: "Developing ClojureScript interactively with Figwheel"
 category: learn-clojurescript
 tags: ["clojurescript", "javascript", "figwheel"]
+hidden: true
 ---
 
 In the last chapter, we only executed one command, but we already have a basic

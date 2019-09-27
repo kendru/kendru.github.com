@@ -4,6 +4,7 @@ title: "Making Choices"
 description: "Learn the ways to handle branching control flow in ClojureScript"
 category: learn-clojurescript
 tags: ["clojurescript"]
+hidden: true
 ---
 
 Up to this point, we have mostly been writing code that is has some starting
