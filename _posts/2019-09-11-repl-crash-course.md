@@ -4,6 +4,7 @@ title: "REPL Crash Course"
 description: "Using the ClojureScript repl for quick experiments"
 category: learn-clojurescript
 tags: ["clojurescript", "javascript", "repl"]
+published: false
 ---
 
 In the previous chapter, we learned how to use Figwheel to reload code whenever
