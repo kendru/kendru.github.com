@@ -1,5 +1,7 @@
 ---
 layout: post
+lesson-url: https://www.learn-clojurescript.com/section-0/lesson-1-a-first-look/
+lesson-name: "Lesson 1: A First Look"
 title: "Why ClojureScript Matters"
 redirect_from:
   - /learning%20clojurescript/2019/09/01/learning-clojurescript-why-clojurescript-matters/
@@ -10,13 +12,3 @@ category: learn-clojurescript
 hidden: true
 ---
 
-Looking for [_Learn ClojureScript_](/learn-clojurescript/)? I have moved all of the content that was previously hosted on this blog to [a dedicated book site](https://learn-clojurescript.com).
-
-Go to this lesson: [Lesson 1: A First Look](https://www.learn-clojurescript.com/section-0/lesson-1-a-first-look/)
-
-<a href="https://www.learn-clojurescript.com">
-    <img src="https://www.learn-clojurescript.com/img/learn-clojurescript-cover.jpg" alt="Cover Image for Learn ClojureScript" />
-</a>
-
-<script src="https://gumroad.com/js/gumroad.js"></script>
-<a class="gumroad-button" href="https://gum.co/learn-cljs" target="_blank">Pre-order Today</a>
