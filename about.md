@@ -2,11 +2,12 @@
 layout: page
 title: About
 permalink: /about/
-#feature-img: "img/sample_feature_img_2.png"
 ---
 
-I am a software professional with a passion for simplicity and an interest
-in functional programming. I started programming as a kid, only to decide that
-a desk job was not the thing for me. However, the lure of building little
-empires of bits in a world of silicon was too great, and I have spent most of my
-career crafting software.
+Andrew is a software engineer who has a passion for developing data-intensive applications.
+Functional programming, scalable application architectures, and performance are a few of
+his favorite topics. Andrew lives in Colorado Springs, CO with his wife and four children.
+
+He is currently a Software Architect at [Quantum Metric](https://www.quantummetric.com) where
+he focuses on designing and developing applications that explore large data sets. Most days,
+we writes code in Go, Rust, and TypeScript.
