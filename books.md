@@ -1,8 +1,12 @@
 ---
 layout: page
-title: Learn ClojureScript
-permalink: /learn-clojurescript/
+title: Books
+permalink: /books/
 ---
+
+<a name="learn-clojurescript">
+
+## Learn ClojureScript
 
 A few years ago, I started writing a book on ClojureScript that was geared towards JavaScript
 programmers. At the time, the best resources for learning ClojureScript were aimed at existing
