@@ -18,3 +18,5 @@ Go to this lesson: [Lesson 1: A First Look](https://www.learn-clojurescript.com/
     <img src="https://www.learn-clojurescript.com/img/learn-clojurescript-cover.jpg" alt="Cover Image for Learn ClojureScript" />
 </a>
 
+<script src="https://gumroad.com/js/gumroad.js"></script>
+<a class="gumroad-button" href="https://gum.co/learn-cljs" target="_blank">Pre-order Today</a>
