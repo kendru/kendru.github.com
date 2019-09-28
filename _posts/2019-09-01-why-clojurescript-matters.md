@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: learn-clojurescript-placeholder
 lesson-url: https://www.learn-clojurescript.com/section-0/lesson-1-a-first-look/
 lesson-name: "Lesson 1: A First Look"
 title: "Why ClojureScript Matters"
