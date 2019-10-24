@@ -23,4 +23,6 @@ to better represent the state of JavaScript today, I have tried to update the Ja
 snippets in these posts and rewrite some of the sections comparing the two languages. I hope that
 you enjoy reading these posts and that they can be of some use to new ClojureScript programmers!
 
-<a href="https://www.learn-clojurescript.com"><h3>Visit the Book Site</h3><img src="https://www.learn-clojurescript.com/img/learn-clojurescript-cover.jpg" alt="Cover Image for Learn ClojureScript" /></a>
+### Visit the Book Site
+
+<a href="https://www.learn-clojurescript.com"><img src="https://www.learn-clojurescript.com/img/learn-clojurescript-cover.jpg" alt="Cover Image for Learn ClojureScript"></a>
