@@ -17,3 +17,10 @@ hide: true
 // Partials
 @import 'includes/header';
 @import 'includes/footer';
+
+div.highlight {
+    border-left: 2px solid #164b78;
+    padding: 8px 12px;
+    background: #fcfcfc;
+    margin: 4px 0;
+}
