@@ -14,7 +14,7 @@ Just look at any book on algorithms, and the majority of them will be some varia
 
 One of these common problems that I have run into again and again over the course of my career is topologically sorting the nodes of a dependency graph. In other words, given some directed acyclic graph - think software packages that can depend on other software packages or tasks within a large company project - sort them such that no item in the list depends on anything that comes later in the list. Let's imagine that we are making a cake, and before we can get started, we need some ingredients. Let's simplify things and say we just need eggs and flour. Well, to have eggs, we need chickens (believe me, I'm resisting the urge to make a joke here), and to have flour, we need grain. Chickens also need grain for feed, and grain needs soil and water to grow in. If we consider the graph that expresses all of these dependencies, it looks something like this:
 
-~ INSERT PICTURE ~
+![The dependency graph of cake](/img/dependency-graph-of-cake.png "The dependency graph of cake")
 
 One possible topological order of this graph is:
 
@@ -289,20 +289,22 @@ func main() {
 	g.DependOn("cake", "flour")
 	g.DependOn("eggs", "chickens")
 	g.DependOn("flour", "grain")
-	g.DependOn("chickens", "feed")
 	g.DependOn("chickens", "grain")
 	g.DependOn("grain", "soil")
+	g.DependOn("grain", "water")
+	g.DependOn("chickens", "water")
 
 	for i, layer := range g.TopoSortedLayers() {
 		fmt.Printf("%d: %s\n", i, strings.Join(layer, ", "))
 	}
 	// Output:
-	// 0: feed, soil
+	// 0: soil, water
 	// 1: grain
 	// 2: flour, chickens
 	// 3: eggs
 	// 4: cake
 }
+
 ```
 
 All of that work was not exactly a piece of cake, but now we have a dependency graph that can be used to topologically sort just about anything. You can find the full code for this post [on GitHub](https://github.com/kendru/darwin/tree/main/go/depgraph). There are some notable limitations to this implementation, and I would like to challenge you to improve it so that it can:
