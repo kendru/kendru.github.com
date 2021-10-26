@@ -6,9 +6,7 @@ category: Go
 tags: ["go", "algorithm", "graphs"]
 ---
 
-Recently, I was thinking about how many of the nontrivial problems that I run into with software engineering boil down to a few simple problems.
-
-Just look at any book on algorithms, and the majority of them will be some variation on sorting or searching collections. Google exists because the question of "what documents contain these phrases?" is a genuinely hard problem to solve (okay, that is vastly simplifying the enormous scope of Google's product, but the basic idea still holds).
+Recently, I was thinking about how many of the nontrivial problems that I run into with software engineering boil down to a few simple problems. Just look at any book on algorithms, and the majority of them will be some variation on sorting or searching collections. Google exists because the question of "what documents contain these phrases?" is a genuinely hard problem to solve (okay, that is vastly simplifying the enormous scope of Google's product, but the basic idea still holds).
 
 ## What is Topological Sorting?
 
