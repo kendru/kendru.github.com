@@ -12,9 +12,7 @@ Just look at any book on algorithms, and the majority of them will be some varia
 
 ## What is Topological Sorting?
 
-One of these common problems that I have run into again and again over the course of my career is topologically sorting the nodes of a dependency graph. In other words, given some directed acyclic graph - think software packages that can depend on other software packages or tasks within a large company project - sort them such that no item in the list depends on anything that comes later in the list. Let's imagine that we are making a cake, and before we can get started, we need some ingredients. Let's simplify things and say we just need eggs and flour. Well, to have eggs, we need chickens (believe me, I'm resisting the urge to make a joke here), and to have flour, we need grain. Chickens also need grain for feed, and grain needs soil and water to grow in. If we consider the graph that expresses all of these dependencies, it looks something like this:
-
-![The dependency graph of cake](/img/dependency-graph-of-cake.png "The dependency graph of cake")
+One of these common problems that I have run into again and again over the course of my career is topologically sorting the nodes of a dependency graph. In other words, given some directed acyclic graph - think software packages that can depend on other software packages or tasks within a large company project - sort them such that no item in the list depends on anything that comes later in the list. Let's imagine that we are making a cake, and before we can get started, we need some ingredients. Let's simplify things and say we just need eggs and flour. Well, to have eggs, we need chickens (believe me, I'm resisting the urge to make a joke here), and to have flour, we need grain. Chickens also need grain for feed, and grain needs soil and water to grow in. If we consider the graph that expresses all of these dependencies, it looks something like this: ![The dependency graph of cake](/img/dependency-graph-of-cake.png "The dependency graph of cake")
 
 One possible topological order of this graph is:
 
