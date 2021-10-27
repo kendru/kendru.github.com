@@ -26,8 +26,6 @@ Also, set aside some time - maybe just five or ten minutes per week - to think b
 
 Whether working on a team or as an individual developer, one of the most helpful practices that you can foster is asking questions - even if you already have a good idea of the answer! By asking someone a question (in person or online), you may get a direct answer, and that is great. However, you may learn another way to think about your problem. Even the exercise of formulating a compelling question can help the way you think about it.
 
-{% twitter 1453031746283323398 %}
-
 Another good reason to ask questions is to fight imposter syndrome. Most of us struggle with feeling like we are not adequate to solve the problem in front of us. The best way to fight imposter syndrome is by being honest with yourself and others about what you know and what you don't know (yet). By asking questions, you tell yourself and everyone around you that you want to learn and that you **can** learn.
 
 ## 3. Let Yourself Get Stuck
